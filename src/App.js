@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Col, Container, Row } from "react-bootstrap";
+
+import TodoColumn from "./components/columns/TodoColumn";
+import DoneColumn from "./components/columns/DoneColumn";
+import InProgressColumn from "./components/columns/InProgressColumn";
+import PriorityColumn from "./components/columns/PriorityColumn";
+import Header from "./components/layout/Header";
+
+export default class App extends React.Component {
+    render() {
+        return (
+            <Container>
+                <Row>
+                    <Header />
+                </Row>
+                <Row className="my-3">
+                    <Col>
+                        <DoneColumn />
+                    </Col>
+                    <Col>
+                        <TodoColumn />
+                    </Col>
+                    <Col>
+                        <InProgressColumn />
+                    </Col>
+                    <Col>
+                        <PriorityColumn />
+                    </Col>
+                </Row>
+            </Container>
+        );
+    }
 }
-
-export default App;
