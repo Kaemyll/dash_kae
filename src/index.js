@@ -16,6 +16,7 @@ import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home/Home";
 import Contact from "./components/pages/Contact";
 import ManageTask from "./components/pages/ManageTasks";
+import Error from "./components/error/Error";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,6 +28,7 @@ root.render(
                     <Route path="/" element={<Home />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/manageTask" element={<ManageTask />} />
+                    <Route path="*" element={<Error />} />
                 </Routes>
             </Row>
             <Main />
