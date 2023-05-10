@@ -20,12 +20,12 @@ export default function Header() {
                     KAE Dashboard (version test)
                 </Navbar.Brand>
 
-                <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#contact">Me contacter</Nav.Link>
-                    <Nav.Link href="#addTask">Ajouter une tâche</Nav.Link>
-                    <Nav.Link href="#editTask">Editer une tâche</Nav.Link>
-                    <Nav.Link href="#deleteTask">Supprimer une tâche</Nav.Link>
+                <Nav className="me-auto">
+                    <Link to="/">Home</Link>
+                    <Link to="/contact">Me contacter</Link>
+                    <Link to="/addTask">Ajouter une tâche</Link>
+                    <Link to="/editTask">Editer une tâche</Link>
+                    <Link to="/deleteTask">Supprimer une tâche</Link>
                 </Nav>
                 <Form inline>
                     <Form.Control
