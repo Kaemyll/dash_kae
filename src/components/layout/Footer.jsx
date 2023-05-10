@@ -1,10 +1,20 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 export default function Footer() {
     return (
         <div>
-            <Container>Footer</Container>
+            <Container className="bg-dark fixed-bottom">
+                <Row className="mr-auto">
+                    <Col></Col>
+                    <Col className="text-center">
+                        <p className="text-light">
+                            by Kaemyll &copy; {new Date().getFullYear()}
+                        </p>
+                    </Col>
+                    <Col></Col>
+                </Row>
+            </Container>
         </div>
     );
 }
