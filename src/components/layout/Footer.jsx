@@ -1,5 +1,7 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
 
 export default function Footer() {
     return (
@@ -8,9 +10,13 @@ export default function Footer() {
                 <Row className="mr-auto">
                     <Col></Col>
                     <Col className="text-center">
-                        <p className="text-light">
+                        <Nav.Link
+                            as={Link}
+                            to="/contact"
+                            className="text-light"
+                        >
                             by Kaemyll &copy; {new Date().getFullYear()}
-                        </p>
+                        </Nav.Link>
                     </Col>
                     <Col></Col>
                 </Row>

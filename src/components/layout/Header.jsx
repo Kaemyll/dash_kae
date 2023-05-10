@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container fluid>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand as={Link} to="/">
                     <img
                         alt="logo"
                         src={Evelogo}
@@ -21,11 +21,15 @@ export default function Header() {
                 </Navbar.Brand>
 
                 <Nav className="me-auto">
-                    <Link to="/">Home</Link>
-                    <Link to="/contact">Me contacter</Link>
-                    <Link to="/addTask">Ajouter une tâche</Link>
-                    <Link to="/editTask">Editer une tâche</Link>
-                    <Link to="/deleteTask">Supprimer une tâche</Link>
+                    <Nav.Link as={Link} to="/addTask">
+                        Ajouter une tâche
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/editTask">
+                        Editer une tâche
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/deleteTask">
+                        Supprimer une tâche
+                    </Nav.Link>
                 </Nav>
                 <Form inline>
                     <Form.Control
