@@ -7,20 +7,15 @@ import "./styles/index.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
-import TodoColumn from "./components/columns/TodoColumn";
-import DoneColumn from "./components/columns/DoneColumn";
-import InProgressColumn from "./components/columns/InProgressColumn";
-import PriorityColumn from "./components/columns/PriorityColumn";
 import Header from "./components/layout/Header";
+import Main from "./components/layout/Main";
 import Footer from "./components/layout/Footer";
 
 import Home from "./components/pages/Home/Home";
 import Contact from "./components/pages/Contact";
-import AddTask from "./components/tasks/AddTask";
-import EditTask from "./components/tasks/EditTask";
-import DeleteTask from "./components/tasks/DeleteTask";
+import ManageTask from "./components/pages/ManageTasks";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -31,25 +26,10 @@ root.render(
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/addTask" element={<AddTask />} />
-                    <Route path="/editTask" element={<EditTask />} />
-                    <Route path="/deleteTask" element={<DeleteTask />} />
+                    <Route path="/manageTask" element={<ManageTask />} />
                 </Routes>
             </Row>
-            <Row className="my-3">
-                <Col>
-                    <DoneColumn />
-                </Col>
-                <Col>
-                    <TodoColumn />
-                </Col>
-                <Col>
-                    <InProgressColumn />
-                </Col>
-                <Col>
-                    <PriorityColumn />
-                </Col>
-            </Row>
+            <Main />
             <Row>
                 <Footer />
             </Row>

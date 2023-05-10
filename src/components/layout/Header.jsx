@@ -21,14 +21,8 @@ export default function Header() {
                 </Navbar.Brand>
 
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/addTask">
-                        Ajouter une tâche
-                    </Nav.Link>
-                    <Nav.Link as={Link} to="/editTask">
-                        Editer une tâche
-                    </Nav.Link>
-                    <Nav.Link as={Link} to="/deleteTask">
-                        Supprimer une tâche
+                    <Nav.Link as={Link} to="/manageTask">
+                        Gérer les tâches
                     </Nav.Link>
                 </Nav>
                 <Form inline>
