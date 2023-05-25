@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -24,9 +24,7 @@ export default function Header() {
 
                 <Col>
                     <Nav className="me-auto">
-                        <h3 className="text-warning">
-                            titre de la page en cours
-                        </h3>
+                        <h3 className="text-warning">headerTitle</h3>
                         <Nav.Link as={Link} to="/manageTask">
                             Gérer les tâches
                         </Nav.Link>
